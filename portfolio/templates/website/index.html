@@ -1,0 +1,36 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Index</title>
+    <link rel="stylesheet" href="{% static 'src/styles.css' %}">
+</head>
+<body class="bg-black h-[2500px]">
+
+<div class="h-full w-full">
+    <div class="flex justify-center items-end bg-sky-700" id="animatedDiv" >
+        <img src="{% static 'images/SkiingMountain.png' %}" alt="Skiing Mountain"/>
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>
+<script>
+  let aDiv = document.getElementById("animatedDiv");
+
+  function changeWidth() {
+    let scrollVal = window.pageYOffset;
+    ( (100 - (scrollVal*100/1500)) ) <= 10 ? aDiv.style.width = "10%" : aDiv.style.width = (100 - (scrollVal*100/1500)) + "%";
+    ( (100 - (scrollVal*100/1500)) ) <= 10 ? aDiv.style.height = "10%" : aDiv.style.height = (100 - (scrollVal*100/1500)) + "%";
+  }
+
+  window.addEventListener(
+    "scroll",
+    function () {
+      requestAnimationFrame(changeWidth);
+    },
+    false
+  );
+</script>
