@@ -1,0 +1,63 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio - Chris Metcalf</title>
+    <link rel="stylesheet" href="{% static 'src/styles.css' %}">
+</head>
+<body class="bg-sky-600 min-h-screen flex justify-center">
+    <div class="w-3/4 min-h-screen bg-white">
+        <div class="grid grid-cols-1 laptop:grid-cols-3 mt-[50px]">
+            <div class="px-[25px] flex justify-end">
+                <img src="{% static 'images/IMG_0968.JPG' %}" alt="Face Pic" height="450px" width="450px" class="rounded-full ">
+            </div>
+            <div class="flex items-center px-[25px] laptop:col-span-2">
+                <ul>
+                    <li class="text-2xl my-2 hover:font-bold">Hello there, my name is Chris Metcalf. I'm a Software Developer that loves tackling challenging problems.</li>
+                    <li class="text-2xl hover:font-bold">I spend most of my free time either in the gym or playing video games with my friends.</li>
+                    <li class="text-2xl my-2 hover:font-bold">My favorite game is Elden Ring with Valheim being a close second.</li>
+                    <li class="text-2xl my-2 hover:font-bold">I go snowboarding in the winter and wakeboarding in the summer.</li>
+                    <li class="text-2xl hover:font-bold">My dream is to work alongside Marine Biologists helping track and protect Marine life.</li>
+                </ul>
+            </div>
+        </div>
+        <div class="grid grid-cols-1 laptop:grid-cols-3 mt-[50px]">
+            <div class="flex items-center px-[25px] justify-end laptop:col-span-2">
+                <ul>
+                    <li class="text-2xl my-2 hover:font-bold">Resilient and maintain a positive attitude even in the face of setbacks.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Reliable and self-motivated, always striving for excellence in every task.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Uphold integrity in all professional and personal interactions.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Strong cultural sensitivity, ensuring respectful and inclusive interactions with diverse groups.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Proficient in managing multiple projects simultaneously without compromising quality.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Skilled at delegation and strategic planning to maximize team efficiency and meet deadlines effectively.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Highly creative in generating solutions for complex problems, leveraging both analytical reasoning and outside-the-box thinking.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Experience in delivering presentations to both technical and non-technical audiences.</li>
+                </ul>
+            </div>
+            <div class="px-[25px] flex justify-start">
+                <img src="{% static 'images/software-development-specialist.jpg' %}" alt="Software Development" height="850px" width="850px" class="rounded-full">
+            </div>
+        </div>
+        <div class="grid grid-cols-1 laptop:grid-cols-3 mt-[50px]">
+            <div class="px-[25px] flex justify-end">
+                <img src="{% static 'images/CodingLang.jpg' %}" alt="Programming Languages" height="850px" width="850px" class="rounded-full">
+            </div>
+            <div class="flex items-center px-[25px] laptop:col-span-2">
+                <ul>
+                    <li class="text-2xl my-2 hover:font-bold">Resilient and maintain a positive attitude even in the face of setbacks.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Reliable and self-motivated, always striving for excellence in every task.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Uphold integrity in all professional and personal interactions.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Strong cultural sensitivity, ensuring respectful and inclusive interactions with diverse groups.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Proficient in managing multiple projects simultaneously without compromising quality.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Skilled at delegation and strategic planning to maximize team efficiency and meet deadlines effectively.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Highly creative in generating solutions for complex problems, leveraging both analytical reasoning and outside-the-box thinking.</li>
+                    <li class="text-2xl my-2 hover:font-bold">Experience in delivering presentations to both technical and non-technical audiences.</li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+</html>

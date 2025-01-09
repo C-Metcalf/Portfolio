@@ -7,66 +7,20 @@
     <link rel="stylesheet" href="{% static 'src/styles.css' %}">
 </head>
 <body class="bg-black h-[5500px]">
-<!--
-<div class="h-full w-full flex justify-center fixed">
-    <div class="flex justify-center items-end bg-sky-700 fixed" id="animatedDiv" >
-        <img src="{% static 'images/SkiingMountain.png' %}" alt="Skiing Mountain"/>
+<div class="bg-gray-400">
+    <div class="relative min-h-screen">
+      <!-- Fixed Image -->
+      <img
+        src="{% static 'images/SkiingMountain.png' %}"
+        alt="Fixed Image"
+        class="fixed top-0 left-1/2 transform -translate-x-1/2 bg-sky-700 transition-all ease-in duration-100 border-solid border-2 border-gray-400"
+        id="animatedDiv"
+      />
     </div>
-</div>
--->
-
-<div class="relative min-h-screen">
-  <!-- Fixed Image -->
-  <img
-    src="{% static 'images/SkiingMountain.png' %}"
-    alt="Fixed Image"
-    class="fixed top-0 left-1/2 transform -translate-x-1/2 bg-sky-700 transition-all ease-in duration-100"
-    id="animatedDiv"
-  />
 </div>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
-<script>
-  let aDiv = document.getElementById("animatedDiv");
-  let oneShot = true;
-
-  function changeWidth() {
-    let scrollVal = window.pageYOffset;
-    let newSize = 100 - (scrollVal * 100 / 1500);
-
-    // Ensure the size does not go below 10%
-    newSize = newSize <= 10 ? 10 : newSize;
-
-    // Update width and height
-    aDiv.style.width = newSize + "%";
-    aDiv.style.height = newSize + "%";
-
-    let currentWidth = parseFloat(aDiv.style.width);
-
-    // If below threshold, make it scroll off the page
-    if (currentWidth <= 15 && oneShot) {
-        if (oneShot) {
-            console.log(oneShot)
-            oneShot = false;
-        }
-        aDiv.style.position = "absolute";
-        aDiv.style.top = `${scrollVal}px`; // Adjusts the top position dynamically
-
-    } else {
-        aDiv.style.position = "fixed";
-        aDiv.style.top = "0"; // Resets top position when fixed
-        oneShot = true;
-    }
-  }
-
-  window.addEventListener(
-    "scroll",
-    function () {
-      requestAnimationFrame(changeWidth);
-    },
-    false
-  );
-</script>
+<script src="{% static 'js/index.js' %}"></script>
 </body>
 </html>
 
